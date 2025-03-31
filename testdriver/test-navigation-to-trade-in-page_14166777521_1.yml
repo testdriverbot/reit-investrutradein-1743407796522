@@ -1,0 +1,17 @@
+version: 4.2.25
+session: 67ea4d460310fe6c25bb450e
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on "Трейд-ин" in the navigation menu.
+    commands:
+      - command: hover-text
+        text: Трейд-ин
+        description: navigation menu option for trade-in
+        action: click
+  - prompt: Assert that the Trade-in page is displayed.
+    commands:
+      - command: assert
+        expect: the Trade-in page is displayed with "Умный ТРЕЙД-ИН" visible
